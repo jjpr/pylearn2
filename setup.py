@@ -56,7 +56,7 @@ class pylearn2_install(install):
               "location. If you know what you are doing, and are very sure "
               "that you want to install Pylearn2 using the `install` "
               "command instead, please type `install`.\n")
-        mode = None
+        mode = 'install'
         while mode not in ['', 'install', 'develop', 'cancel']:
             if mode is not None:
                 print("Please try again")
@@ -76,8 +76,6 @@ setup(
     description='A machine learning library built on top of Theano.',
     license='BSD 3-clause license',
     long_description=open('README.rst', 'rb').read().decode('utf8'),
-    dependency_links=['git+http://github.com/Theano/Theano.git#egg=Theano'],
-    install_requires=['numpy>=1.5', 'pyyaml', 'argparse', "Theano"],
     scripts=['bin/pylearn2-plot-monitor', 'bin/pylearn2-print-monitor',
              'bin/pylearn2-show-examples', 'bin/pylearn2-show-weights',
              'bin/pylearn2-train'],
